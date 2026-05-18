@@ -7,6 +7,11 @@
   them in index.html without breaking the rest.
 */
 
+/* Base styles for all sections */
+section {
+    /* Section content won't be hidden behind the navbar*/
+    padding: var(--section-gap) 2rem;
+}
 
 /* ══════════════════════════════════════════════════════════════════
    ABOUT
@@ -121,6 +126,7 @@
 @media (max-width: 680px) {
     #about .about-grid {
         grid-template-columns: 1fr;
+
         /* single column on small screens */
     }
 }
@@ -131,19 +137,44 @@
    auto-fill grid: columns are created automatically to fill the row,
    each at least 260px wide. Cards reflow as the screen resizes.
 ══════════════════════════════════════════════════════════════════ */
-.projects-grid {
+.projects-timeline {
     display: grid;
-    /* repeat(auto-fill, minmax(260px, 1fr)):
-     - auto-fill: create as many columns as will fit
-     - minmax(260px, 1fr): each column is at least 260px, at most 1fr */
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1rem;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: .7rem;
+    position: relative;
+    padding-left: 3rem;
+}
+
+/* The vertical line */
+.projects-timeline::before {
+    content: '';
+    position: absolute;
+    left: .5rem;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--terracotta);
+    border-radius: 2px;
+}
+
+/* The timeline point/dot */
+.timeline-marker {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--terracotta);
+    border: 2px solid #ffffff;
+    margin-left: -2.9rem;
+    align-self: center;
+    grid-column: 1;
 }
 
 .project-card {
+    grid-column: 2;
     background: var(--white);
     border-radius: 16px;
-    padding: 1.4rem;
+    padding: 1.2rem;
     border: 1px solid var(--sand);
     /* transition animates transform and box-shadow on hover */
     transition: transform 0.25s, box-shadow 0.25s;
@@ -286,6 +317,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
+
 }
 
 .ref-card {

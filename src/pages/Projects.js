@@ -4,9 +4,10 @@ export default function Projects() {
             <div className="reveal">
                 <h2>Things I've built</h2>
             </div>
-            <div className="projects-grid">
-                <div className="project-card reveal">
-                    <div className="project-icon">🌿</div>
+            <div className="projects-timeline">
+                <div className="timeline-marker"></div>
+
+                <li className="project-card reveal">
                     <h3>GreenTrack</h3>
                     <p>
                         A carbon footprint tracker that helps households understand and reduce their environmental
@@ -17,10 +18,11 @@ export default function Projects() {
                         <span className="tag">Node.js</span>
                         <span className="tag">PostgreSQL</span>
                     </div>
-                </div>
+                </li>
+                <div className="timeline-marker"></div>
+
 
                 <div className="project-card reveal">
-                    <div className="project-icon">📚</div>
                     <h3>ShelfMate</h3>
                     <p>
                         A reading companion app that tracks your book list, suggests your next read using ML, and
@@ -32,9 +34,10 @@ export default function Projects() {
                         <span className="tag">OpenAI API</span>
                     </div>
                 </div>
+                <div className="timeline-marker"></div>
+
 
                 <div className="project-card reveal">
-                    <div className="project-icon">🔔</div>
                     <h3>PulseAlert</h3>
                     <p>
                         Real-time infrastructure monitoring with smart alert deduplication — reduced alert fatigue by
@@ -46,9 +49,9 @@ export default function Projects() {
                         <span className="tag">Grafana</span>
                     </div>
                 </div>
+                <div className="timeline-marker"></div>
 
                 <div className="project-card reveal">
-                    <div className="project-icon">🎨</div>
                     <h3>Paletto</h3>
                     <p>
                         A design-token management tool for teams. Sync your colour palettes, typography, and spacing
@@ -60,9 +63,9 @@ export default function Projects() {
                         <span className="tag">CLI</span>
                     </div>
                 </div>
+                <div className="timeline-marker"></div>
 
                 <div className="project-card reveal">
-                    <div className="project-icon">💬</div>
                     <h3>Hearth</h3>
                     <p>
                         A community forum platform built for small neighbourhoods — hyperlocal, low-noise, and genuinely
@@ -74,9 +77,9 @@ export default function Projects() {
                         <span className="tag">Redis</span>
                     </div>
                 </div>
+                <div className="timeline-marker"></div>
 
                 <div className="project-card reveal">
-                    <div className="project-icon">⚡</div>
                     <h3>Fastlane CLI</h3>
                     <p>
                         An open-source developer utility for automating repetitive git workflows. Over 2,000 downloads on npm.
@@ -87,6 +90,7 @@ export default function Projects() {
                         <span className="tag">Open Source</span>
                     </div>
                 </div>
+
             </div>
         </section>
     );

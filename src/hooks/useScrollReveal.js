@@ -9,7 +9,6 @@ export default function useScrollReveal() {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (!entry.isIntersecting) return;
 
                     const siblings = [...entry.target.parentElement.querySelectorAll('.reveal')];
                     const index = siblings.indexOf(entry.target);
